@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.alinhamento{
+    height: 130px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header{
+    background-color: #9bd2de;
+    width: 100%;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo a{
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+p{
+    font-family: 'Roboto';
+    color: black;
+    font-size: 25px;
+}

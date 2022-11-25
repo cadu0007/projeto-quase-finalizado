@@ -1,0 +1,39 @@
+<app-desafio></app-desafio>
+<main>
+    <h2 class="cd">Cadastro</h2>
+    <!-- class cadastro para o h2 -->
+    <form [formGroup]="form">
+        <div class="cadastro">
+            <div>
+                <p>Nome</p>
+                <input formControlName="nome" type="text"><br>
+            </div>
+            <div>
+                <p>E-Mail</p>
+                <input formControlName="email" type="text"><br>
+            </div>
+            <div>
+                <p>Telefone</p>
+                <input formControlName="telefone" type="text"><br>
+            </div>
+        </div>
+        <br><br>
+        <button class="cadastrar" (click)="cadastrarDadosUsuario()"*ngIf="!verificarEditar">Cadastrar</button>
+        <button class="cadastrar" (click)="EditarCliente1()" *ngIf="verificarEditar">Editar</button>
+        <br><br>
+    </form>
+
+            <!-- parte Nome, Email, Numero, Editar e Excluir -->
+            <div class="todopne">
+                <div class="paulo" *ngFor="let item of usuario; index as i; ">
+                    <p>{{item.nome}}</p>
+                    <p>{{item.email}}</p>
+                    <p>{{item.telefone}}</p>
+                    <button class="editar" (click)="EditarCliente2(item)">Editar</button>
+                    <button class="excluir" (click)="deleteDadosUsuarios(item.id)">Excluir</button>
+                </div>
+                
+               
+            </div><br><br>
+</main>
+<app-footer></app-footer>
